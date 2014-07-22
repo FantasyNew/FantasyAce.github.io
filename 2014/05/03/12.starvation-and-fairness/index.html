@@ -30,7 +30,7 @@
 	
 </head>
 
-  <body>11
+  <body>
     <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
@@ -48,49 +48,31 @@
 							<a href="/archives" title="归档">归档</a>
 							
 					
-						
-							<a href="/book" title="读书">读书</a>
-							
-					
-						
-							<a href="/about" title="关于">关于</a>
-							
-					
 					
 				</nav>
             </div>
         </div>
     </div>
 </header>
-
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/05/03/12.starvation-and-fairness/" title="饥饿与公平" itemprop="url">饥饿与公平</a>
-  </h1>
-  <p class="article-author">By
-    
-      <a href="http://fantasynew.github.io/about" title="Fantasy Ace">Fantasy Ace</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2014-05-03T14:06:44.000Z" itemprop="datePublished">发表于2014/05/03</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中引起饥饿的原因"><span class="toc-number">1.</span> <span class="toc-text">Java中引起饥饿的原因</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高优先级的线程吞下了低优先级线程的所有CPU时间"><span class="toc-number">1.1.</span> <span class="toc-text">高优先级的线程吞下了低优先级线程的所有CPU时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的阻塞在等待进入一个同步块上面"><span class="toc-number">1.2.</span> <span class="toc-text">线程无限期的阻塞在等待进入一个同步块上面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的等待一个对象（调用了对象的wait()方法）"><span class="toc-number">1.3.</span> <span class="toc-text">线程无限期的等待一个对象（调用了对象的wait()方法）</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#在java中实现公平"><span class="toc-number">2.</span> <span class="toc-text">在java中实现公平</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用锁代替同步块"><span class="toc-number">2.1.</span> <span class="toc-text">使用锁代替同步块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#公平锁"><span class="toc-number">2.2.</span> <span class="toc-text">公平锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能考虑"><span class="toc-number">2.3.</span> <span class="toc-text">性能考虑</span></a></li></ol>
-		
-		</div>
-		
-		<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/starvation-and-fairness.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/starvation-and-fairness.html</a></p>
+    <div id="body">
+    <div class="container">
+        <div class="col-group">
+			<div class="col-8" id="main">
+				<div class="res-cons">
+					<article class="post">
+						<header><h1 class="post-title">饥饿与公平</h1></header>
+						<date class="post-meta">2014/05/03</date>
+						<div class="post-content">
+							
+							
+								<div id="toc" class="toc-article">
+									<strong class="toc-title">文章目录</strong>
+									
+										<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中引起饥饿的原因"><span class="toc-number">1.</span> <span class="toc-text">Java中引起饥饿的原因</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高优先级的线程吞下了低优先级线程的所有CPU时间"><span class="toc-number">1.1.</span> <span class="toc-text">高优先级的线程吞下了低优先级线程的所有CPU时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的阻塞在等待进入一个同步块上面"><span class="toc-number">1.2.</span> <span class="toc-text">线程无限期的阻塞在等待进入一个同步块上面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的等待一个对象（调用了对象的wait()方法）"><span class="toc-number">1.3.</span> <span class="toc-text">线程无限期的等待一个对象（调用了对象的wait()方法）</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#在java中实现公平"><span class="toc-number">2.</span> <span class="toc-text">在java中实现公平</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用锁代替同步块"><span class="toc-number">2.1.</span> <span class="toc-text">使用锁代替同步块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#公平锁"><span class="toc-number">2.2.</span> <span class="toc-text">公平锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能考虑"><span class="toc-number">2.3.</span> <span class="toc-text">性能考虑</span></a></li></ol>
+									
+								</div>
+							
+							<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/starvation-and-fairness.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/starvation-and-fairness.html</a></p>
 <p>如果一个线程因为其它线程一直占用而没有获得CPU时间，就称为“饥饿”。线程被“饿死”是因为其它线程一直占用CPU时间而它没有。饥饿的解决方案被称作“公平”，所有的线程都被授予相同的执行机会。</p>
 <h1 id="Java中引起饥饿的原因">Java中引起饥饿的原因</h1>
 <p>下面是导致java线程饥饿的三个常见原因：</p>
@@ -154,93 +136,50 @@
 <h2 id="性能考虑">性能考虑</h2>
 <p>　　如果你比较一下<em>Lock</em>和<em>FairLock</em>类，你会发现<em>FairLock</em>类的lock()和unlock()里面的东西更多。这些多出来的代码会导致<em>FairLock</em>的同步机制比<em>Lock</em>有一点慢。这对你的应用程序的影响有多大取决于在<em>FairLock</em>创建的临界区里面的代码执行的时间有多长。执行的时间越长，同步器的额外开销越小。这当然也和这段代码被调用的频繁程度有关系。</p>
   
-	</div>
-		<footer class="article-footer clearfix">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/java多线程/">java多线程</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/多线程/">多线程</a><a href="/tags/饥饿/">饥饿</a><a href="/tags/公平/">公平</a>
-  </div>
-
-
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://fantasynew.github.io/2014/05/03/12.starvation-and-fairness/" data-title="饥饿与公平 | Fantasy Ace&#39;s blog" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-
-</footer>
-
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
-
-<div class="prev">
-<a href="/2014/05/02/11.deadlock-prevention/"  title="死锁预防">
- <strong>上一篇：</strong><br/> 
- <span>死锁预防
-</span>
-</a>
-</div>
-
+						</div>
+					</article>
+					<div id="comments">
+					</div>	
+				</div>
+			</div>
+			<div id="secondary">
+				
+				  <style>
+#dasheng-index a{outline:none;color:#333}
+#dasheng-index a{text-decoration:none}
+#dasheng-index .entry-common{padding:20px 0;border-bottom:1px dotted #EEEEEE}
+#dasheng-index .entry-common:first-child{padding-top:0 !important}
+#dasheng-index .clearfix{}
+#dasheng-index .clearfix:before,.clearfix:after{content:"";display:table;line-height:0}
+#dasheng-index .clearfix:after{clear:both}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index {position:relative;padding:20px 0;border-bottom:1px #eee dotted}
+#dasheng-index .yahei{font-family:"Microsoft Yahei",arial,helvetica,sans-serif}
+#dasheng-index .entry-shout-title{background:none repeat scroll 0 0 #D14836;color:#FFFFFF;font-size:14px;height:25px;left:0;line-height:25px;padding:0 20px;position:absolute;top:26px;width:30px}
+#dasheng-index .entry-dasheng-inner{background:none repeat scroll 0 0 #EEEEEE;border:1px solid #DDDDDD;display:inline-block;padding:10px}
+#dasheng-index .entry-dasheng-inner .dasheng_content{display:block;margin:20px 0 10px;padding:10px 10px 0}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index .dasheng_comment{border-top:1px solid #DDDDDD;margin:10px;padding-top:10px}
+#dasheng-index .dasheng_comment p{color:#666666;font-size:12px;line-height:1.8em}
+#dasheng-index .dasheng_original p{color:#666666;font-size:12px;line-height:1.8em}
+</style>
 
 
  
- <div class="next" >
- <a href="/2014/05/05/13.nested-monitor-lockout/" title="嵌套监控锁定">
-  <strong>下一篇：</strong><br/>
-  <span>
-  嵌套监控锁定</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="y2l055x9x5d7oms4" data-title="http://fantasynew.github.io/2014/05/03/12.starvation-and-fairness/" data-url="undefined"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"fantasynew"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-<!-- 多说公共JS代码 end -->
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java中引起饥饿的原因"><span class="toc-number">1.</span> <span class="toc-text">Java中引起饥饿的原因</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高优先级的线程吞下了低优先级线程的所有CPU时间"><span class="toc-number">1.1.</span> <span class="toc-text">高优先级的线程吞下了低优先级线程的所有CPU时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的阻塞在等待进入一个同步块上面"><span class="toc-number">1.2.</span> <span class="toc-text">线程无限期的阻塞在等待进入一个同步块上面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线程无限期的等待一个对象（调用了对象的wait()方法）"><span class="toc-number">1.3.</span> <span class="toc-text">线程无限期的等待一个对象（调用了对象的wait()方法）</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#在java中实现公平"><span class="toc-number">2.</span> <span class="toc-text">在java中实现公平</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用锁代替同步块"><span class="toc-number">2.1.</span> <span class="toc-text">使用锁代替同步块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#公平锁"><span class="toc-number">2.2.</span> <span class="toc-text">公平锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能考虑"><span class="toc-number">2.3.</span> <span class="toc-text">性能考虑</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  <style>
+ 
+ <div id="dasheng-index" class="entry-common entry-dasheng clearfix">
+	 <a class="yahei entry-shout-title" href="http://lunax.info/shout">呐喊</a>
+	 <div class="entry-dasheng-inner clearfix" id="dasheng-main">
+		 <div class="dasheng_comment clearfix">
+			 <p>Winners are simply willing to do what losers won&#39;t.</p>
+			 <div class="dasheng_original t-r">
+				 <p>——Million Dollar Baby</p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+				
+				  <style>
 	.categorieslist {
 		clear : left;
 	}
@@ -265,8 +204,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  
+				
+				  
 <style>
 	.tagslist ul li {
 		float: left;
@@ -329,8 +268,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  <style>
+				
+				  <style>
 	.linkslist {
 		clear : left;
 	}
@@ -350,9 +289,10 @@ var duoshuoQuery = {short_name:"fantasynew"};
 			<li><a href="http://www.koolearn.com/" target="_blank" title="koolearn">koolearn.com</a></li>
 		</ul>
 	</section>
-
-</aside>
-</div>
+				
+			</div>		
+		</div>
     </div>
+</div>
   </body>
 </html>

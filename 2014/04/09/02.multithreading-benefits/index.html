@@ -30,7 +30,7 @@
 	
 </head>
 
-  <body>11
+  <body>
     <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
@@ -48,49 +48,31 @@
 							<a href="/archives" title="归档">归档</a>
 							
 					
-						
-							<a href="/book" title="读书">读书</a>
-							
-					
-						
-							<a href="/about" title="关于">关于</a>
-							
-					
 					
 				</nav>
             </div>
         </div>
     </div>
 </header>
-
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/04/09/02.multithreading-benefits/" title="多线程的优点" itemprop="url">多线程的优点</a>
-  </h1>
-  <p class="article-author">By
-    
-      <a href="http://fantasynew.github.io/about" title="Fantasy Ace">Fantasy Ace</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2014-04-09T14:06:44.000Z" itemprop="datePublished">发表于2014/04/09</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更好的资源利用率"><span class="toc-number">2.</span> <span class="toc-text">更好的资源利用率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更简单的程序设计"><span class="toc-number">3.</span> <span class="toc-text">更简单的程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序响应更快"><span class="toc-number">4.</span> <span class="toc-text">程序响应更快</span></a></li></ol>
-		
-		</div>
-		
-		<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/benefits.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/benefits.html</a></p>
+    <div id="body">
+    <div class="container">
+        <div class="col-group">
+			<div class="col-8" id="main">
+				<div class="res-cons">
+					<article class="post">
+						<header><h1 class="post-title">多线程的优点</h1></header>
+						<date class="post-meta">2014/04/09</date>
+						<div class="post-content">
+							
+							
+								<div id="toc" class="toc-article">
+									<strong class="toc-title">文章目录</strong>
+									
+										<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更好的资源利用率"><span class="toc-number">2.</span> <span class="toc-text">更好的资源利用率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更简单的程序设计"><span class="toc-number">3.</span> <span class="toc-text">更简单的程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序响应更快"><span class="toc-number">4.</span> <span class="toc-text">程序响应更快</span></a></li></ol>
+									
+								</div>
+							
+							<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/benefits.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/benefits.html</a></p>
 <h2 id="简介">简介</h2>
 <p>　　尽管有许多挑战，多线程仍然被使用的原因是它有几个优点，这些优点是：</p>
 <blockquote>
@@ -132,93 +114,50 @@
 <p>　　这个方式下，服务器线程可以很快回到监听状态，因此更多的客户端可以发送请求到服务器，这个服务也变得响应更快。  </p>
 <p>　　桌面应用程序同样如此，如果你点击一个按钮就开启一个耗时的任务，并且执行这个任务的线程同时负责刷新窗口和按钮，那么在这个任务执行过程中这个应用程序会显示无响应的。相反，这个任务可以交给一个响应线程来处理，当响应线程在处理这个任务的时候，窗口线程可以自由响应其他的用户请求。当响应线程结束的时候它会通知窗口线程，窗口线程就会根据任务的结果来更新应用程序窗口。用户的角度看这种具有响应线程的程序会显得响应速度很快。</p>
   
-	</div>
-		<footer class="article-footer clearfix">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/java多线程/">java多线程</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/多线程/">多线程</a><a href="/tags/资源利用率/">资源利用率</a>
-  </div>
-
-
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://fantasynew.github.io/2014/04/09/02.multithreading-benefits/" data-title="多线程的优点 | Fantasy Ace&#39;s blog" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-
-</footer>
-
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
-
-<div class="prev">
-<a href="/2014/04/07/01.introduction-to-java-concurrency/"  title="Java并发介绍">
- <strong>上一篇：</strong><br/> 
- <span>Java并发介绍
-</span>
-</a>
-</div>
-
+						</div>
+					</article>
+					<div id="comments">
+					</div>	
+				</div>
+			</div>
+			<div id="secondary">
+				
+				  <style>
+#dasheng-index a{outline:none;color:#333}
+#dasheng-index a{text-decoration:none}
+#dasheng-index .entry-common{padding:20px 0;border-bottom:1px dotted #EEEEEE}
+#dasheng-index .entry-common:first-child{padding-top:0 !important}
+#dasheng-index .clearfix{}
+#dasheng-index .clearfix:before,.clearfix:after{content:"";display:table;line-height:0}
+#dasheng-index .clearfix:after{clear:both}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index {position:relative;padding:20px 0;border-bottom:1px #eee dotted}
+#dasheng-index .yahei{font-family:"Microsoft Yahei",arial,helvetica,sans-serif}
+#dasheng-index .entry-shout-title{background:none repeat scroll 0 0 #D14836;color:#FFFFFF;font-size:14px;height:25px;left:0;line-height:25px;padding:0 20px;position:absolute;top:26px;width:30px}
+#dasheng-index .entry-dasheng-inner{background:none repeat scroll 0 0 #EEEEEE;border:1px solid #DDDDDD;display:inline-block;padding:10px}
+#dasheng-index .entry-dasheng-inner .dasheng_content{display:block;margin:20px 0 10px;padding:10px 10px 0}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index .dasheng_comment{border-top:1px solid #DDDDDD;margin:10px;padding-top:10px}
+#dasheng-index .dasheng_comment p{color:#666666;font-size:12px;line-height:1.8em}
+#dasheng-index .dasheng_original p{color:#666666;font-size:12px;line-height:1.8em}
+</style>
 
 
  
- <div class="next" >
- <a href="/2014/04/11/03.costs-of-multithreading/" title="多线程的代价">
-  <strong>下一篇：</strong><br/>
-  <span>
-  多线程的代价</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="8t7435urct04at94" data-title="http://fantasynew.github.io/2014/04/09/02.multithreading-benefits/" data-url="undefined"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"fantasynew"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-<!-- 多说公共JS代码 end -->
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更好的资源利用率"><span class="toc-number">2.</span> <span class="toc-text">更好的资源利用率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更简单的程序设计"><span class="toc-number">3.</span> <span class="toc-text">更简单的程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序响应更快"><span class="toc-number">4.</span> <span class="toc-text">程序响应更快</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  <style>
+ 
+ <div id="dasheng-index" class="entry-common entry-dasheng clearfix">
+	 <a class="yahei entry-shout-title" href="http://lunax.info/shout">呐喊</a>
+	 <div class="entry-dasheng-inner clearfix" id="dasheng-main">
+		 <div class="dasheng_comment clearfix">
+			 <p>人不管是谁都无法看清现实中的一切，大多数人只希望看到自己想看到的和想要的现实而已。</p>
+			 <div class="dasheng_original t-r">
+				 <p>——尤里乌斯·恺撒</p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+				
+				  <style>
 	.categorieslist {
 		clear : left;
 	}
@@ -243,8 +182,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  
+				
+				  
 <style>
 	.tagslist ul li {
 		float: left;
@@ -307,8 +246,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  <style>
+				
+				  <style>
 	.linkslist {
 		clear : left;
 	}
@@ -328,9 +267,10 @@ var duoshuoQuery = {short_name:"fantasynew"};
 			<li><a href="http://www.koolearn.com/" target="_blank" title="koolearn">koolearn.com</a></li>
 		</ul>
 	</section>
-
-</aside>
-</div>
+				
+			</div>		
+		</div>
     </div>
+</div>
   </body>
 </html>

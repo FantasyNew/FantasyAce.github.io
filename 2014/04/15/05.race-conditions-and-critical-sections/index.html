@@ -30,7 +30,7 @@
 	
 </head>
 
-  <body>11
+  <body>
     <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
@@ -48,49 +48,31 @@
 							<a href="/archives" title="归档">归档</a>
 							
 					
-						
-							<a href="/book" title="读书">读书</a>
-							
-					
-						
-							<a href="/about" title="关于">关于</a>
-							
-					
 					
 				</nav>
             </div>
         </div>
     </div>
 </header>
-
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/04/15/05.race-conditions-and-critical-sections/" title="竞态条件与临界区" itemprop="url">竞态条件与临界区</a>
-  </h1>
-  <p class="article-author">By
-    
-      <a href="http://fantasynew.github.io/about" title="Fantasy Ace">Fantasy Ace</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2014-04-15T14:06:44.000Z" itemprop="datePublished">发表于2014/04/15</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#竞态条件与临界区"><span class="toc-number">1.</span> <span class="toc-text">竞态条件与临界区</span></a></li></ol>
-		
-		</div>
-		
-		<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html</a></p>
+    <div id="body">
+    <div class="container">
+        <div class="col-group">
+			<div class="col-8" id="main">
+				<div class="res-cons">
+					<article class="post">
+						<header><h1 class="post-title">竞态条件与临界区</h1></header>
+						<date class="post-meta">2014/04/15</date>
+						<div class="post-content">
+							
+							
+								<div id="toc" class="toc-article">
+									<strong class="toc-title">文章目录</strong>
+									
+										<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#竞态条件与临界区"><span class="toc-number">1.</span> <span class="toc-text">竞态条件与临界区</span></a></li></ol>
+									
+								</div>
+							
+							<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/race-conditions-and-critical-sections.html</a></p>
 <p>　　在一个应用程序中同时运行多个线程本身不会引起问题，问题出现在多个线程访问相同资源的时候，比如同一内存（变量，数组或者对象），系统（数据库，网络服务等等）或者文件。事实上，问题只出现在一个或者多个线程对这些资源进行写操作的时候。只要这些资源没有变化，多个线程对同一资源进行读操作是安全的。</p>
 <p>　　下面是被多个线程同时执行时可能会失败的代码示例：
 　　</p>
@@ -109,93 +91,50 @@
 <h2 id="竞态条件与临界区">竞态条件与临界区</h2>
 <p>　　在两个线程竞争同一资源的情况下，资源访问的顺序非常重要的，被称作存在竞态条件。导致竞态条件出现的代码区域被称作临界区。在前一个例子中方法add()就是一个临界区，它导致了竞态条件。临界区里适当的线程同步可以避免竞态条件的发生。　</p>
   
-	</div>
-		<footer class="article-footer clearfix">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/java多线程/">java多线程</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/多线程/">多线程</a><a href="/tags/竞态条件/">竞态条件</a><a href="/tags/临界区/">临界区</a>
-  </div>
-
-
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://fantasynew.github.io/2014/04/15/05.race-conditions-and-critical-sections/" data-title="竞态条件与临界区 | Fantasy Ace&#39;s blog" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-
-</footer>
-
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
-
-<div class="prev">
-<a href="/2014/04/13/04.creating-and-starting-threads/"  title="创建和启动java线程">
- <strong>上一篇：</strong><br/> 
- <span>创建和启动java线程
-</span>
-</a>
-</div>
-
+						</div>
+					</article>
+					<div id="comments">
+					</div>	
+				</div>
+			</div>
+			<div id="secondary">
+				
+				  <style>
+#dasheng-index a{outline:none;color:#333}
+#dasheng-index a{text-decoration:none}
+#dasheng-index .entry-common{padding:20px 0;border-bottom:1px dotted #EEEEEE}
+#dasheng-index .entry-common:first-child{padding-top:0 !important}
+#dasheng-index .clearfix{}
+#dasheng-index .clearfix:before,.clearfix:after{content:"";display:table;line-height:0}
+#dasheng-index .clearfix:after{clear:both}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index {position:relative;padding:20px 0;border-bottom:1px #eee dotted}
+#dasheng-index .yahei{font-family:"Microsoft Yahei",arial,helvetica,sans-serif}
+#dasheng-index .entry-shout-title{background:none repeat scroll 0 0 #D14836;color:#FFFFFF;font-size:14px;height:25px;left:0;line-height:25px;padding:0 20px;position:absolute;top:26px;width:30px}
+#dasheng-index .entry-dasheng-inner{background:none repeat scroll 0 0 #EEEEEE;border:1px solid #DDDDDD;display:inline-block;padding:10px}
+#dasheng-index .entry-dasheng-inner .dasheng_content{display:block;margin:20px 0 10px;padding:10px 10px 0}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index .dasheng_comment{border-top:1px solid #DDDDDD;margin:10px;padding-top:10px}
+#dasheng-index .dasheng_comment p{color:#666666;font-size:12px;line-height:1.8em}
+#dasheng-index .dasheng_original p{color:#666666;font-size:12px;line-height:1.8em}
+</style>
 
 
  
- <div class="next" >
- <a href="/2014/04/18/06.thread-safety-and-shared-resources/" title="线程安全和资源共享">
-  <strong>下一篇：</strong><br/>
-  <span>
-  线程安全和资源共享</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="96wkcbm45w38nqxj" data-title="http://fantasynew.github.io/2014/04/15/05.race-conditions-and-critical-sections/" data-url="undefined"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"fantasynew"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-<!-- 多说公共JS代码 end -->
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#竞态条件与临界区"><span class="toc-number">1.</span> <span class="toc-text">竞态条件与临界区</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  <style>
+ 
+ <div id="dasheng-index" class="entry-common entry-dasheng clearfix">
+	 <a class="yahei entry-shout-title" href="http://lunax.info/shout">呐喊</a>
+	 <div class="entry-dasheng-inner clearfix" id="dasheng-main">
+		 <div class="dasheng_comment clearfix">
+			 <p>Veni, vidi, vici.(我来,我见,我征服!)</p>
+			 <div class="dasheng_original t-r">
+				 <p>——尤里乌斯.凯撒</p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+				
+				  <style>
 	.categorieslist {
 		clear : left;
 	}
@@ -220,8 +159,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  
+				
+				  
 <style>
 	.tagslist ul li {
 		float: left;
@@ -284,8 +223,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  <style>
+				
+				  <style>
 	.linkslist {
 		clear : left;
 	}
@@ -305,9 +244,10 @@ var duoshuoQuery = {short_name:"fantasynew"};
 			<li><a href="http://www.koolearn.com/" target="_blank" title="koolearn">koolearn.com</a></li>
 		</ul>
 	</section>
-
-</aside>
-</div>
+				
+			</div>		
+		</div>
     </div>
+</div>
   </body>
 </html>

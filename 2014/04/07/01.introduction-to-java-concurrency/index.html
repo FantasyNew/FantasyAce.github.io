@@ -30,7 +30,7 @@
 	
 </head>
 
-  <body>11
+  <body>
     <header id="header" class="clearfix">
     <div class="container">
         <div class="col-group">
@@ -48,49 +48,31 @@
 							<a href="/archives" title="归档">归档</a>
 							
 					
-						
-							<a href="/book" title="读书">读书</a>
-							
-					
-						
-							<a href="/about" title="关于">关于</a>
-							
-					
 					
 				</nav>
             </div>
         </div>
     </div>
 </header>
-
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/04/07/01.introduction-to-java-concurrency/" title="Java并发介绍" itemprop="url">Java并发介绍</a>
-  </h1>
-  <p class="article-author">By
-    
-      <a href="http://fantasynew.github.io/about" title="Fantasy Ace">Fantasy Ace</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2014-04-07T14:06:44.000Z" itemprop="datePublished">发表于2014/04/07</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引子"><span class="toc-number">1.</span> <span class="toc-text">引子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java的多线程和并发"><span class="toc-number">2.</span> <span class="toc-text">Java的多线程和并发</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java并发"><span class="toc-number">2.1.</span> <span class="toc-text">Java并发</span></a></li></ol>
-		
-		</div>
-		
-		<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/index.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/index.html</a></p>
+    <div id="body">
+    <div class="container">
+        <div class="col-group">
+			<div class="col-8" id="main">
+				<div class="res-cons">
+					<article class="post">
+						<header><h1 class="post-title">Java并发介绍</h1></header>
+						<date class="post-meta">2014/04/07</date>
+						<div class="post-content">
+							
+							
+								<div id="toc" class="toc-article">
+									<strong class="toc-title">文章目录</strong>
+									
+										<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引子"><span class="toc-number">1.</span> <span class="toc-text">引子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java的多线程和并发"><span class="toc-number">2.</span> <span class="toc-text">Java的多线程和并发</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java并发"><span class="toc-number">2.1.</span> <span class="toc-text">Java并发</span></a></li></ol>
+									
+								</div>
+							
+							<p>原文地址：<a href="http://tutorials.jenkov.com/java-concurrency/index.html" target="_blank">http://tutorials.jenkov.com/java-concurrency/index.html</a></p>
 <h2 id="引子">引子</h2>
 <p>　　过去一台计算机只有单个CPU，每次只能执行一个程序。后来的计算机可以支持多任务处理，意味着它们可以同时执行多个程序（即任务或流程）。虽然不是真正意义上的“同时”，而是多个程序共享一个CPU，并交给操作系统在执行中的程序间进行切换，以保证每个程序在切换过程中都能得到一定的执行时间。  <a id="more"></a></p>
 <p>　　多任务处理技术给软件开发人员带来了新的挑战。程序不能被假设占用所有的CPU可用时间、所有的内存和其它资源。一个“表现良好”的程序应该在不用这些资源的时候对其释放，以保证其它程序的使用。  </p>
@@ -116,93 +98,50 @@
 <li><a href="http://fantasynew.github.io/2014/05/01/10.deadlock/">死锁</a></li>
 </ul>
   
-	</div>
-		<footer class="article-footer clearfix">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/java多线程/">java多线程</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/多线程/">多线程</a><a href="/tags/并发/">并发</a>
-  </div>
-
-
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://fantasynew.github.io/2014/04/07/01.introduction-to-java-concurrency/" data-title="Java并发介绍 | Fantasy Ace&#39;s blog" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-
-</footer>
-
-
-   	       
-	</article>
-	
-<nav class="article-nav clearfix">
-
-<div class="prev">
-<a href="/2014/04/01/hello-world/"  title="Hello World">
- <strong>上一篇：</strong><br/> 
- <span>Hello World
-</span>
-</a>
-</div>
-
+						</div>
+					</article>
+					<div id="comments">
+					</div>	
+				</div>
+			</div>
+			<div id="secondary">
+				
+				  <style>
+#dasheng-index a{outline:none;color:#333}
+#dasheng-index a{text-decoration:none}
+#dasheng-index .entry-common{padding:20px 0;border-bottom:1px dotted #EEEEEE}
+#dasheng-index .entry-common:first-child{padding-top:0 !important}
+#dasheng-index .clearfix{}
+#dasheng-index .clearfix:before,.clearfix:after{content:"";display:table;line-height:0}
+#dasheng-index .clearfix:after{clear:both}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index {position:relative;padding:20px 0;border-bottom:1px #eee dotted}
+#dasheng-index .yahei{font-family:"Microsoft Yahei",arial,helvetica,sans-serif}
+#dasheng-index .entry-shout-title{background:none repeat scroll 0 0 #D14836;color:#FFFFFF;font-size:14px;height:25px;left:0;line-height:25px;padding:0 20px;position:absolute;top:26px;width:30px}
+#dasheng-index .entry-dasheng-inner{background:none repeat scroll 0 0 #EEEEEE;border:1px solid #DDDDDD;display:inline-block;padding:10px}
+#dasheng-index .entry-dasheng-inner .dasheng_content{display:block;margin:20px 0 10px;padding:10px 10px 0}
+#dasheng-index .t-r{text-align:right}
+#dasheng-index .dasheng_comment{border-top:1px solid #DDDDDD;margin:10px;padding-top:10px}
+#dasheng-index .dasheng_comment p{color:#666666;font-size:12px;line-height:1.8em}
+#dasheng-index .dasheng_original p{color:#666666;font-size:12px;line-height:1.8em}
+</style>
 
 
  
- <div class="next" >
- <a href="/2014/04/09/02.multithreading-benefits/" title="多线程的优点">
-  <strong>下一篇：</strong><br/>
-  <span>
-  多线程的优点</span>
-</a>
-</div>
-
-</nav>
-
-	
-<section id="comment">
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="01x792u5ij4cjsb0" data-title="http://fantasynew.github.io/2014/04/07/01.introduction-to-java-concurrency/" data-url="undefined"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"fantasynew"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
-<!-- 多说公共JS代码 end -->
-</section>
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引子"><span class="toc-number">1.</span> <span class="toc-text">引子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java的多线程和并发"><span class="toc-number">2.</span> <span class="toc-text">Java的多线程和并发</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java并发"><span class="toc-number">2.1.</span> <span class="toc-text">Java并发</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  <style>
+ 
+ <div id="dasheng-index" class="entry-common entry-dasheng clearfix">
+	 <a class="yahei entry-shout-title" href="http://lunax.info/shout">呐喊</a>
+	 <div class="entry-dasheng-inner clearfix" id="dasheng-main">
+		 <div class="dasheng_comment clearfix">
+			 <p>It&#39;s wonderful to have a beginner&#39;s mind.(拥有初学者的心态是件了不起的事情。)</p>
+			 <div class="dasheng_original t-r">
+				 <p>——乔布斯</p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+				
+				  <style>
 	.categorieslist {
 		clear : left;
 	}
@@ -227,8 +166,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  
+				
+				  
 <style>
 	.tagslist ul li {
 		float: left;
@@ -291,8 +230,8 @@ var duoshuoQuery = {short_name:"fantasynew"};
 		</ul>
 	</section>
 
-
-  <style>
+				
+				  <style>
 	.linkslist {
 		clear : left;
 	}
@@ -312,9 +251,10 @@ var duoshuoQuery = {short_name:"fantasynew"};
 			<li><a href="http://www.koolearn.com/" target="_blank" title="koolearn">koolearn.com</a></li>
 		</ul>
 	</section>
-
-</aside>
-</div>
+				
+			</div>		
+		</div>
     </div>
+</div>
   </body>
 </html>
